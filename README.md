@@ -110,12 +110,3 @@ gunicorn -w 4 -b 0.0.0.0:5000 main:app
 
 ---
 
-## **Next Steps**  
-Once the local setup is working, you can proceed with **deploying this site to your Ubuntu Server with Apache** for internal use.  
-
-🚀 Happy Coding!
-```
-
----
-
-This **README.md** provides step-by-step instructions to set up and run the site properly. Let me know if you want any adjustments! 🚀
