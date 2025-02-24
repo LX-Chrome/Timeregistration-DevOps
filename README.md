@@ -1,4 +1,4 @@
-Here's a **README.md** file that provides clear setup instructions for your site. It includes installation steps, environment variable setup, and how to run the application.  
+Here's a **README.md** file that provides clear setup instructions. It includes installation steps, environment variable setup, and how to run the application.  
 
 ---
 
