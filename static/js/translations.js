@@ -16,7 +16,7 @@ const translations = {
         "Achternaam": "Last Name",
         "Geboortedatum": "Date of Birth",
         "Functie": "Role",
-        "Werkmail": "Work Email",
+        "Werkmail": "Business Email",
         "Kantoorruimte": "Office Space",
         "Uren": "Hours",
         "Uitloggen": "Log Out",
