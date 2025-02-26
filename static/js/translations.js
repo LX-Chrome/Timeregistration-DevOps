@@ -47,7 +47,8 @@ const translations = {
         "Opdracht Toevoegen": "Add Assignment",
         "Selecteer een klant...": "Select a customer...",
         "Acties": "Actions",
-        "Nieuwe Registratie Toevoegen": "Add New Entry"
+        "Nieuwe Registratie Toevoegen": "Add New Entry",
+        
     }
 };
 
