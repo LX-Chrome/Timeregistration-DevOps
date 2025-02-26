@@ -48,7 +48,7 @@ const translations = {
         "Selecteer een klant...": "Select a customer...",
         "Acties": "Actions",
         "Nieuwe Registratie Toevoegen": "Add New Entry",
-        
+
     }
 };
 
@@ -60,6 +60,7 @@ function toggleLanguage() {
 }
 
 function translatePage() {
+    if (currentLang === 'nl') return; // Dutch is default
     document.querySelectorAll('*').forEach(element => {
         if (element.children.length === 0) { // Skip elements that contain other elements
             let textContent = element.textContent.trim();
