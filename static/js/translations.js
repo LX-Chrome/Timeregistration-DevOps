@@ -30,7 +30,7 @@ const translations = {
         "Recente Urenregistraties": "Recent Time Entries",
         "Goede dag": "Good day",
         "Recente Check-ins": "Recent Check-ins",
-        " Nieuwe Registratie": " New Registration",
+        "Nieuwe Registratie": "New Registration",
         "Datum": "Date",
         "Omschrijving": "Description",
         "Aan het werk": "Working",
@@ -48,7 +48,15 @@ const translations = {
         "Selecteer een klant...": "Select a customer...",
         "Acties": "Actions",
         "Nieuwe Registratie Toevoegen": "Add New Entry",
-
+        "Urenregistraties": "Time Entries",
+        "Registratie Toevoegen": "Add Entry",
+        "Exporteren": "Export",
+        "Klanten Overzicht": "Customer Oversight",
+        "Medewerkers Overzicht": "Employee Oversight",
+        "Wijzigingen Opslaan": "Save Changes",
+        "Nieuwe Klant": "New Customer",
+        "Nieuwe Opdracht": "New Assignment",
+        "Nieuwe Opdracht Toevoegen": "Add New Assignment",
     }
 };
 
@@ -61,21 +69,27 @@ function toggleLanguage() {
 
 function translatePage() {
     if (currentLang === 'nl') return; // Dutch is default
+
     document.querySelectorAll('*').forEach(element => {
-        if (element.children.length === 0) { // Skip elements that contain other elements
-            let textContent = element.textContent.trim();
+        // Skip elements with no direct text content
+        if (!element.childNodes.length) return;
 
-            // Handle dynamic "Goede dag, [username]!"
-            if (textContent.startsWith("Goede dag")) {
-                element.textContent = textContent.replace("Goede dag", "Good day");
-                return; // Skip normal translation logic for this element
-            }
+        element.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) { // Only modify text nodes, keeping icons intact
+                let textContent = node.textContent.trim();
 
-            // General translation lookup
-            if (translations.en[textContent]) {
-                element.textContent = translations.en[textContent];
+                // Handle dynamic "Goede dag, [username]!"
+                if (textContent.startsWith("Goede dag")) {
+                    node.textContent = textContent.replace("Goede dag", "Good day");
+                    return;
+                }
+
+                // General translation lookup
+                if (translations.en[textContent]) {
+                    node.textContent = translations.en[textContent];
+                }
             }
-        }
+        });
     });
 
     // Special case: Translate placeholder text
@@ -86,8 +100,3 @@ function translatePage() {
         }
     });
 }
-
-// Run translation on page load
-document.addEventListener('DOMContentLoaded', () => {
-    translatePage();
-});
