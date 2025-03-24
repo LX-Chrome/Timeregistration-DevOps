@@ -1,3 +1,8 @@
+THIS REPOSITORY IS OUTDATED, PLEASE VISIT OUR NEW ONE TO STAY UP TO DATE!
+DEZE REPOSITORY GELDT NIET MEER, A.U.B VOLG ONZE NIEUWE REPOSITORY VOOR DE NIEUWSTE!
+
+https://github.com/LX-Chrome/UrenRegistratie
+
 Here's a **README.md** file that provides clear setup instructions. It includes installation steps, environment variable setup, and how to run the application.  
 
 ---
