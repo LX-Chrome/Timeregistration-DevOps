@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <i data-feather="code" class="me-2"></i>gildeDevOps Solutions
+                <i data-feather="code" class="me-2"></i> gildeDevOps Solutions
             </a>
             {% if current_user.is_authenticated %}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -50,7 +50,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <button class="btn btn-link nav-link" id="themeToggle">
-                            <i data-feather="moon" class="feather-sm"></i>
+                            <i id="themeIcon" data-feather="moon" class="feather-sm"></i>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -84,8 +84,13 @@
         {% block content %}{% endblock %}
     </main>
 
+    <!-- JavaScript bestanden (onderaan de pagina) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<<<<<<< Updated upstream
+=======
+    <script src="/static/js/main.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>
